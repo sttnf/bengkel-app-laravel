@@ -1,0 +1,142 @@
+{
+    "name": "Workshop Pro - Modern Automotive Workshop Management",
+    "short_name": "Workshop Pro",
+    "description": "Transform your automotive workshop with our cutting-edge management solution. Streamline operations, boost efficiency, and delight customers.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "categories": ["business", "productivity", "automotive"],
+    "lang": "en-US",
+    "dir": "ltr",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/icons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/desktop-1.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Workshop Pro Dashboard on Desktop"
+        },
+        {
+            "src": "/screenshots/mobile-1.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Workshop Pro Mobile Interface"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Dashboard",
+            "short_name": "Dashboard",
+            "description": "Access your workshop dashboard",
+            "url": "/dashboard",
+            "icons": [
+                {
+                    "src": "/icons/dashboard-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "New Service",
+            "short_name": "New Service",
+            "description": "Create a new service request",
+            "url": "/services/create",
+            "icons": [
+                {
+                    "src": "/icons/service-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "short_name": "Inventory",
+            "description": "Manage workshop inventory",
+            "url": "/inventory",
+            "icons": [
+                {
+                    "src": "/icons/inventory-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "play",
+            "url": "https://play.google.com/store/apps/details?id=com.workshoppro.app",
+            "id": "com.workshoppro.app"
+        },
+        {
+            "platform": "itunes",
+            "url": "https://apps.apple.com/app/workshop-pro/id123456789"
+        }
+    ],
+    "prefer_related_applications": false,
+    "protocol_handlers": [
+        {
+            "protocol": "web+workshoppro",
+            "url": "/handle?type=%s"
+        }
+    ],
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    }
+}
