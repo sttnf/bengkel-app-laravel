@@ -34,6 +34,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Service management routes
     Route::resource('services', ServiceController::class);
 
+    Route::resource('technicians', TechnicianController::class);
+
+
     // Customer vehicle routes
     Route::resource('customer-vehicles', CustomerVehicleController::class);
     Route::get('api/customer-vehicles/by-customer', [CustomerVehicleController::class, 'getByCustomer'])->name('customer-vehicles.by-customer');

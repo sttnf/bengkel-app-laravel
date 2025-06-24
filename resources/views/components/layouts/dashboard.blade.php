@@ -65,16 +65,7 @@
                     </div>
 
                     <div class="flex items-center space-x-4">
-                        <!-- Notifications -->
-                        <button
-                            class="relative p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 17h5l-5 5v-5zM21 7H3a2 2 0 00-2 2v6a2 2 0 002 2h5l3-3h3l3 3h5a2 2 0 002-2V9a2 2 0 00-2-2z">
-                                </path>
-                            </svg>
-                            <span class="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full"></span>
-                        </button>
+                      
 
                         <!-- User menu -->
                         <div class="relative" x-data="{ open: false }">
