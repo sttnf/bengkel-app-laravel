@@ -19,6 +19,7 @@ class UserServiceController extends Controller
     public function index(): View
     {
         $user = Auth::user();
+
         $serviceRequests = $user->serviceRequests()
             ->with(['service', 'technician', 'payments', 'customerVehicle.vehicle'])
             ->latest()
@@ -66,8 +67,8 @@ class UserServiceController extends Controller
             'status' => 'pending',
         ]);
 
-        return redirect()->route('user.services.show', $serviceRequest)
-            ->with('success', 'Service request submitted successfully!');
+        return redirect()->route('user.services.show')
+            ->with('success', 'Service request created successfully!');
     }
 
     /**
