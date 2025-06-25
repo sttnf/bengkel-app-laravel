@@ -72,17 +72,21 @@ class UserServiceController extends Controller
     }
 
     /**
+     * Helper: Get a service request for the current user or fail with 404.
+     */
+    private function getUserServiceRequestOrFail($id): ServiceRequest
+    {
+        return ServiceRequest::where('id', $id)
+            ->where('user_id', Auth::id())
+            ->firstOrFail();
+    }
+
+    /**
      * Display the specified service request.
      */
-    public function show(ServiceRequest $serviceRequest): View
+    public function show($serviceRequest): View
     {
-        $user = Auth::user();
-
-        // Ensure user can only view their own service requests
-        if ($serviceRequest->user_id !== $user->id) {
-            abort(403);
-        }
-
+        $serviceRequest = $this->getUserServiceRequestOrFail($serviceRequest);
         $serviceRequest->load(['service', 'technician', 'customerVehicle.vehicle', 'payments']);
 
         return view('user.services.show', compact('serviceRequest'));
@@ -91,27 +95,25 @@ class UserServiceController extends Controller
     /**
      * Show payment form for a service request.
      */
-    public function payment(ServiceRequest $serviceRequest)
+    public function payment($serviceRequest)
     {
-        $user = Auth::user();
+        $serviceRequest = $this->getUserServiceRequestOrFail($serviceRequest);
 
         // Ensure user can only pay for their own service requests
-        if ($serviceRequest->user_id !== $user->id) {
+        if ($serviceRequest->user_id !== Auth::id()) {
             abort(403);
         }
 
         // Check if service is completed and payment is pending
         if ($serviceRequest->status !== 'completed') {
-            return redirect()->route('user.services.show', $serviceRequest)
+            return redirect()->route('user.services.show', $serviceRequest->id)
                 ->with('error', 'Service must be completed before payment.');
         }
 
-        $existingPayment = $serviceRequest->payments()
-            ->where('status', 'completed')
-            ->first();
+        $existingPayment = $serviceRequest->payments()->where('status', 'completed')->first();
 
         if ($existingPayment) {
-            return redirect()->route('user.services.show', $serviceRequest)
+            return redirect()->route('user.services.show', $serviceRequest->id)
                 ->with('info', 'This service has already been paid for.');
         }
 
@@ -121,19 +123,14 @@ class UserServiceController extends Controller
     /**
      * Process payment for a service request.
      */
-    public function processPayment(Request $request, ServiceRequest $serviceRequest): RedirectResponse
+    public function processPayment(Request $request, $serviceRequest): RedirectResponse
     {
+        $serviceRequest = $this->getUserServiceRequestOrFail($serviceRequest);
+
         $validated = $request->validate([
             'payment_method' => 'required|in:cash,card,transfer,e_wallet',
             'amount' => 'required|numeric|min:0',
         ]);
-
-        $user = Auth::user();
-
-        // Ensure user can only pay for their own service requests
-        if ($serviceRequest->user_id !== $user->id) {
-            abort(403);
-        }
 
         // Create payment record
         Payment::create([
@@ -144,7 +141,7 @@ class UserServiceController extends Controller
             'payment_date' => now(),
         ]);
 
-        return redirect()->route('user.services.show', $serviceRequest)
+        return redirect()->route('user.services.show', $serviceRequest->id)
             ->with('success', 'Payment processed successfully!');
     }
 }

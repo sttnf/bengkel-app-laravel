@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Workshop Pro - Modern Automotive Workshop Management</title>
+    <title>Bengkel Kita</title>
     <meta name="description"
         content="Transform your automotive workshop with our cutting-edge management solution. Streamline operations, boost efficiency, and delight customers with Workshop Pro.">
     <meta name="keywords"
@@ -402,7 +402,7 @@
                 class="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center mb-4 pulse-glow mx-auto">
                 <i class="fas fa-wrench text-white text-2xl animate-spin"></i>
             </div>
-            <div class="text-lg font-semibold text-gray-900">Loading Workshop Pro...</div>
+            <div class="text-lg font-semibold text-gray-900">Loading Bengkel Kita...</div>
             <div class="w-32 h-1 bg-gray-200 rounded-full mt-4 overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full animate-pulse"></div>
             </div>
@@ -415,42 +415,42 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 lg:h-20">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="relative">
-                        <div
-                            class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center shadow-lg">
-                            <i class="fas fa-wrench text-white text-lg"></i>
-                        </div>
-                        <div
-                            class="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-orange-400 to-red-500 rounded-full border-2 border-white">
-                        </div>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-gray-900 tracking-tight">Workshop Pro</h1>
-                        <p class="text-xs text-gray-500 -mt-1">Smart Management</p>
-                    </div>
-                </div>
+                <a href="/" class="flex items-center gap-2 text-xl font-bold text-blue-600">
+                    <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9L2.2 10.8A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Bengkel Kita</span>
+                </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#features"
                         class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group">
-                        Features
+                        Fitur
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                     </a>
                     <a href="#testimonials"
                         class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group">
-                        Testimonials
+                        Testimoni
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                     </a>
                     <a href="#contact"
                         class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group">
-                        Contact
+                        Kontak
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
                     </a>
+                    <a href="#layanan"
+                        class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group">
+                        Layanan
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+
                 </nav>
 
                 <!-- Auth Buttons -->
@@ -503,11 +503,11 @@
                 @click.away="mobileMenuOpen = false">
                 <div class="px-4 py-6 space-y-4">
                     <a href="#features" @click="mobileMenuOpen = false"
-                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Features</a>
+                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Fitur</a>
                     <a href="#testimonials" @click="mobileMenuOpen = false"
-                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Testimonials</a>
+                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Testimoni</a>
                     <a href="#contact" @click="mobileMenuOpen = false"
-                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Contact</a>
+                        class="block text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors">Kontak</a>
                     <div class="pt-4 border-t border-gray-200 space-y-3">
                         @if (Route::has('login'))
                             @auth
@@ -555,62 +555,48 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <!-- Hero Content -->
                     <div class="text-center lg:text-left" x-data="{ 
-                            words: ['Efficiency', 'Innovation', 'Success', 'Growth'],
-                            currentWord: 0
-                         }" x-init="setInterval(() => { currentWord = (currentWord + 1) % words.length }, 3000)">
+                    words: ['Perawatan Mobil Anda'],
+                    currentWord: 0
+                 }" x-init="setInterval(() => { currentWord = (currentWord + 1) % words.length }, 3000)">
                         <div
-                            class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
-                            <i class="fas fa-star mr-2"></i>
-                            #1 Workshop Management Solution
+                            class="inline-flex items-center px-4 py-4 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6 gap-2">
+                            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9L2.2 10.8A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Bengkel Kita
                         </div>
 
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                            Transform Your Workshop with
+                            Solusi Terbaik untuk
                             <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 block"
                                 x-text="words[currentWord]"></span>
                         </h1>
 
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            Streamline operations, boost productivity, and deliver exceptional service with our
-                            comprehensive workshop management platform. Join thousands of workshops already transforming
-                            their business.
+                            Bengkel Mobil Terpercaya untuk mengelola perawatan kendaraan Anda agar Selalu dalam Kondisi
+                            Prima.
                         </p>
 
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                            <a href="{{ Route::has('register') ? route('register') : '#' }}"
+                            <a href="#layanan"
                                 class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                                 <i class="fas fa-rocket mr-2 group-hover:animate-bounce"></i>
-                                Start Free Trial
+                                Lihat Layanan
                                 <span class="ml-2 opacity-75">→</span>
                             </a>
-                            <a href="#features"
+                            <a href="#contact"
                                 class="group inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
                                 <i class="fas fa-play mr-2 group-hover:text-blue-600"></i>
-                                Explore Features
+                                Hubungi Kami
                             </a>
-                        </div>
-
-                        <!-- Trust Indicators -->
-                        <div
-                            class="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                No Credit Card Required
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-clock text-blue-500 mr-2"></i>
-                                Setup in 5 Minutes
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-shield-alt text-indigo-500 mr-2"></i>
-                                Enterprise Security
-                            </div>
                         </div>
                     </div>
 
-                    <!-- Hero Image/Video -->
+                    <!-- Hero Image - Orang Sedang Service di Bengkel -->
                     <div class="relative float" x-data="{ imageLoaded: false }">
                         <div
                             class="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
@@ -653,14 +639,13 @@
                     <div
                         class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
                         <i class="fas fa-cogs mr-2"></i>
-                        Powerful Features
+                        Keunggulan
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Everything Your Workshop Needs
+                        Mengapa Memilih Kami?
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Comprehensive tools designed specifically for modern automotive workshops. Boost efficiency,
-                        improve customer satisfaction, and grow your business.
+                        Layanan Terbaik dengan Standar Kualitas Tinggi
                     </p>
                 </div>
 
@@ -673,26 +658,11 @@
                         <div class="relative z-10">
                             <div
                                 class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-clipboard-list text-2xl text-white"></i>
+                                <i class="fas fa-cogs text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Smart Service Management</h3>
-                            <p class="text-gray-600 mb-6">Track service requests from intake to completion. Automated
-                                workflows, real-time updates, and intelligent scheduling keep your workshop running
-                                smoothly.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Digital service forms
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Automated status updates
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Resource scheduling
-                                </li>
-                            </ul>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Servis Berkualitas</h3>
+                            <p class="text-gray-600 mb-6">Tim Mekanik Berpengalaman dengan Peralatan Modern untuk Hasil
+                                Terbaik.</p>
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
@@ -705,26 +675,10 @@
                         <div class="relative z-10">
                             <div
                                 class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-boxes text-2xl text-white"></i>
+                                <i class="fas fa-clock text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Intelligent Inventory</h3>
-                            <p class="text-gray-600 mb-6">Real-time stock monitoring with predictive analytics. Never
-                                run out of essential parts and optimize your inventory investment with smart reorder
-                                points.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Low stock alerts
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Barcode scanning
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Supplier management
-                                </li>
-                            </ul>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Tepat Waktu</h3>
+                            <p class="text-gray-600 mb-6">Estimasi Waktu yang Akurat dan Pengerjaan yang Efisien.</p>
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
@@ -737,153 +691,115 @@
                         <div class="relative z-10">
                             <div
                                 class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-users text-2xl text-white"></i>
+                                <i class="fas fa-shield text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Customer Experience</h3>
-                            <p class="text-gray-600 mb-6">Self-service portal for customers to book services, track
-                                progress, and access vehicle history. Build trust and improve satisfaction
-                                automatically.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Online booking
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Progress tracking
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Digital receipts
-                                </li>
-                            </ul>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Garansi Layanan</h3>
+                            <p class="text-gray-600 mb-6">Jaminan Kepuasan dengan Garansi Servis Hingga 3 Bulan.</p>
                         </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
                         </div>
                     </div>
-
-                    <!-- Feature 4: Analytics -->
-                    <div class="group relative p-8 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl border border-orange-100 hover:border-orange-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
-                        @mouseenter="hoveredFeature = 4" @mouseleave="hoveredFeature = null">
-                        <div class="relative z-10">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-chart-line text-2xl text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Business Intelligence</h3>
-                            <p class="text-gray-600 mb-6">Comprehensive analytics and reporting to understand your
-                                business performance. Make data-driven decisions to grow your workshop.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Revenue analytics
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Performance metrics
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Custom reports
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                        </div>
-                    </div>
-
-                    <!-- Feature 5: Mobile App -->
-                    <div class="group relative p-8 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-100 hover:border-teal-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
-                        @mouseenter="hoveredFeature = 5" @mouseleave="hoveredFeature = null">
-                        <div class="relative z-10">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-mobile-alt text-2xl text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Mobile First</h3>
-                            <p class="text-gray-600 mb-6">Native mobile apps for technicians and managers. Access
-                                everything you need from anywhere in the workshop or on the road.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    iOS & Android apps
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Offline capability
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Push notifications
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-teal-600 to-cyan-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                        </div>
-                    </div>
-
-                    <!-- Feature 6: Integration -->
-                    <div class="group relative p-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl border border-indigo-100 hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
-                        @mouseenter="hoveredFeature = 6" @mouseleave="hoveredFeature = null">
-                        <div class="relative z-10">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-plug text-2xl text-white"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Seamless Integration</h3>
-                            <p class="text-gray-600 mb-6">Connect with your existing tools and systems. QuickBooks,
-                                payment processors, and more. No disruption to your workflow.</p>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Accounting software
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    Payment gateways
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
-                                    API access
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Feature Demo Section -->
-                <div class="mt-20 text-center">
+            </div>
+        </section>
+
+        <!-- Layanan -->
+        <section id="layanan" class="py-20 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
                     <div
-                        class="inline-flex items-center space-x-4 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200">
-                        <div class="flex -space-x-2">
-                            <img class="w-10 h-10 rounded-full border-2 border-white"
-                                src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
-                            <img class="w-10 h-10 rounded-full border-2 border-white"
-                                src="https://randomuser.me/api/portraits/women/2.jpg" alt="">
-                            <img class="w-10 h-10 rounded-full border-2 border-white"
-                                src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
-                            <div
-                                class="w-10 h-10 rounded-full border-2 border-white bg-blue-600 flex items-center justify-center text-white text-sm font-semibold">
-                                +50</div>
+                        class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+                        <i class="fas fa-tools mr-2"></i>
+                        Layanan Kami
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                        Layanan Terbaik untuk Bengkel Anda
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Solusi Lengkap untuk Semua Kebutuhan Perawatan Kendaraan
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" x-data="{ hoveredFeature: null }">
+
+                    <!-- Feature 1: Service Management -->
+                    <div class="group relative p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+                        @mouseenter="hoveredFeature = 1" @mouseleave="hoveredFeature = null">
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-cogs text-2xl text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Tune Up Mesin</h3>
+                                <p class="text-gray-600 mb-6">Perawatan Rutin untuk Performa Optimal Mesin Kendaraan
+                                    Anda.</p>
+                                <span class="text-blue-500 font-semibold block mb-6">Mulai dari Rp. 500.000</span>
+                            </div>
+                            <button
+                                class="mt-auto w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                Pesan Sekarang
+                            </button>
                         </div>
-                        <div class="text-left">
-                            <p class="text-gray-900 font-semibold">Join 2,000+ workshop owners</p>
-                            <p class="text-gray-600 text-sm">Already transforming their business</p>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
                         </div>
-                        <a href="{{ Route::has('register') ? route('register') : '#' }}"
-                            class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200">
-                            Join Them
-                        </a>
+                    </div>
+
+                    <!-- Feature 2: Inventory Management -->
+                    <div class="group relative p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+                        @mouseenter="hoveredFeature = 2" @mouseleave="hoveredFeature = null">
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-tools text-2xl text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Service Rem</h3>
+                                <p class="text-gray-600 mb-6">Pemeriksaan dan Perbaikan Sistem Pengereman untuk Keamanan
+                                    Berkendara.</p>
+                                <span class="text-blue-500 font-semibold block mb-6">Mulai dari Rp. 300.000</span>
+                            </div>
+                            <button
+                                class="mt-auto w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Customer Portal -->
+                    <div class="group relative p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+                        @mouseenter="hoveredFeature = 3" @mouseleave="hoveredFeature = null">
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div>
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-cogs text-2xl text-white"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Ganti Oli</h3>
+                                <p class="text-gray-600 mb-6">Penggantian Oli Mesin Berkualitas untuk Performa Optimal.
+                                </p>
+                                <span class="text-blue-500 font-semibold block mb-6">Mulai dari Rp. 250.000</span>
+                            </div>
+                            <button
+                                class="mt-auto w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-700 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
         <!-- Statistics & Testimonials Section -->
         <section id="testimonials"
@@ -905,14 +821,8 @@
                         <div
                             class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-lg rounded-full text-sm font-semibold mb-6">
                             <i class="fas fa-trophy mr-2 text-yellow-400"></i>
-                            Trusted Worldwide
+                            <span class="text-yellow-400">Top Rated</span>
                         </div>
-                        <h2 class="text-4xl lg:text-5xl font-bold mb-8">
-                            Powering Success Across
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                                50+ Countries
-                            </span>
-                        </h2>
 
                         <!-- Animated Statistics -->
                         <div class="grid grid-cols-2 gap-8 mb-12" x-data="{
@@ -944,31 +854,24 @@
                             }
                         }">
                             <div class="text-center">
-                                <div class="text-4xl lg:text-5xl font-bold mb-2"
-                                    x-text="workshops.toLocaleString() + '+'"></div>
-                                <div class="text-blue-200 text-sm font-medium">Active Workshops</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-2">15+</div>
+                                <div class="text-blue-200 text-sm font-medium">Layanan Spesialis</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl lg:text-5xl font-bold mb-2" x-text="satisfaction + '%'"></div>
-                                <div class="text-blue-200 text-sm font-medium">Satisfaction Rate</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-2">10+</div>
+                                <div class="text-blue-200 text-sm font-medium">Tahun Pengalaman</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl lg:text-5xl font-bold mb-2" x-text="uptime + '%'"></div>
-                                <div class="text-blue-200 text-sm font-medium">Uptime Guarantee</div>
+                                <div class="text-4xl lg:text-5xl font-bold mb-2">5000+</div>
+                                <div class="text-blue-200 text-sm font-medium">Pelanggan Puas</div>
                             </div>
                             <div class="text-center">
                                 <div class="text-4xl lg:text-5xl font-bold mb-2">
-                                    <span x-text="support"></span><span x-show="support > 0">/7</span>
+                                    20+
                                 </div>
-                                <div class="text-blue-200 text-sm font-medium">Expert Support</div>
+                                <div class="text-blue-200 text-sm font-medium">Mekanik Ahli</div>
                             </div>
                         </div>
-
-                        <a href="{{ Route::has('register') ? route('register') : '#' }}"
-                            class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-xl">
-                            <i class="fas fa-rocket mr-2"></i>
-                            Start Your Success Story
-                        </a>
                     </div>
 
                     <!-- Testimonials Carousel -->
@@ -1047,46 +950,34 @@
                 <div class="max-w-4xl mx-auto">
                     <div
                         class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
-                        <i class="fas fa-rocket mr-2"></i>
-                        Ready to Get Started?
+                        <i class="fas fa-phone mr-2"></i>
+                        Kontak
                     </div>
 
                     <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Transform Your Workshop Today
+                        Hubungi Kami
                     </h2>
 
                     <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                        Join thousands of workshop owners who have already revolutionized their business with Workshop
-                        Pro. Start your free trial today - no credit card required.
+                        Kami Siap Melayani Kebutuhan Perawatan Mobil Anda.
                     </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="{{ Route::has('register') ? route('register') : '#' }}"
-                            class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl">
-                            <i class="fas fa-rocket mr-2"></i>
-                            Start Free Trial
-                            <span class="ml-2">→</span>
-                        </a>
-                        <a href="#features"
-                            class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
-                            <i class="fas fa-phone mr-2"></i>
-                            Book a Demo
-                        </a>
-                    </div>
 
                     <!-- Trust Indicators -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-shield-check text-3xl text-green-500 mb-2"></i>
-                            <p class="text-sm text-gray-600 font-medium">30-Day Money Back Guarantee</p>
+                            <i class="fas fa-phone text-3xl text-green-500 mb-2"></i>
+                            <p class="text-sm text-gray-600 font-medium">Telepon</p>
+                            <p class="text-sm text-gray-600 font-medium">+62 123 4567 890</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-headset text-3xl text-blue-500 mb-2"></i>
-                            <p class="text-sm text-gray-600 font-medium">24/7 Expert Support</p>
+                            <i class="fas fa-mail-bulk text-3xl text-blue-500 mb-2"></i>
+                            <p class="text-sm text-gray-600 font-medium">Email</p>
+                            <p class="text-sm text-gray-600 font-medium">info@milkita.my.id</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <i class="fas fa-cloud-upload text-3xl text-purple-500 mb-2"></i>
-                            <p class="text-sm text-gray-600 font-medium">Free Data Migration</p>
+                            <i class="fas fa-map-marker text-3xl text-purple-500 mb-2"></i>
+                            <p class="text-sm text-gray-600 font-medium">Alamat</p>
+                            <p class="text-sm text-gray-600 font-medium">Jl. Bengkel No. 123, Jakarta</p>
                         </div>
                     </div>
                 </div>
@@ -1100,19 +991,16 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Company Info -->
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div
-                            class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-wrench text-white text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Workshop Pro</h3>
-                            <p class="text-xs text-gray-400 -mt-1">Smart Management</p>
-                        </div>
-                    </div>
+                    <a href="/" class="flex items-center gap-2 text-xl font-bold text-primary-600">
+                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9L2.2 10.8A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>Bengkel Kita</span>
+                    </a>
                     <p class="text-gray-400 mb-6 max-w-md">
-                        The leading workshop management solution trusted by thousands of automotive businesses
-                        worldwide. Transform your operations today.
+                        Solusi Terpercaya untuk Perawatan dan Perbaikan Kendaraan Anda.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#"
@@ -1136,25 +1024,26 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <h4 class="text-white font-semibold mb-4">Layanan</h4>
                     <ul class="space-y-2">
-                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Tune Up</a>
                         </li>
-                        <li><a href="#testimonials"
-                                class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Servis
+                                Rem</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Ganti Oli</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Support -->
                 <div>
-                    <h4 class="text-white font-semibold mb-4">Support</h4>
+                    <h4 class="text-white font-semibold mb-4">Jam Operasional</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API Reference</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">System Status</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Senin - Jumat: 08:00 -
+                                17:00</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sabtu: 08:00 -
+                                14:00</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Minggu: Tutup</a></li>
                     </ul>
                 </div>
             </div>
@@ -1162,7 +1051,7 @@
             <!-- Footer Bottom -->
             <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
                 <div class="text-sm text-gray-400 mb-4 md:mb-0">
-                    &copy; {{ date('Y') }} Workshop Pro. All rights reserved.
+                    &copy; {{ date('Y') }} Bengkel Kita. All rights reserved.
                 </div>
                 <div class="flex space-x-6 text-sm">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
